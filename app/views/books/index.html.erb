@@ -1,4 +1,13 @@
 <%= link_to "home", root_path %>
 <h1>Les oeuvres</h1>
 
-
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= book.title %>
+      <%= book.author %>
+      <%= book.description %>
+      <%= book.category %>
+    </li>
+  <% end %>
+</ul>

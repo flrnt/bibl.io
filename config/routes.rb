@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get "/books", to: "books#index"
+  resources :books
 
   root to: "pages#home"
 end

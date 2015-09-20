@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
 
+  before_action :set_book
+
   def index
     @books = Book.all
   end
@@ -24,8 +26,9 @@ class BooksController < ApplicationController
   end
 
   private
-
-  def find_book
+  # find book id before each action
+  def set_book
+    @book = Book.find(params[:id])
   end
 
   def book_params

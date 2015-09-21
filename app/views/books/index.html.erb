@@ -6,6 +6,9 @@
     <li>
       <%= link_to book.title, book_path(book) %>
       <%= book.isbn %>
+      <%= link_to "Editer", edit_book_path(book) %> |
+      <%= link_to "Supprimer", book_path(book), method: :delete,
+      data: { confirm: "Êtes-vous sûr?" } %>
     </li>
   <% end %>
 </ul>

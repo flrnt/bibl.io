@@ -24,7 +24,7 @@ class BooksController < ApplicationController
 
   def update
     @book.update(book_params)
-    redirect_to books_path
+    redirect_to book_path(@book)
   end
 
   def destroy
@@ -39,6 +39,6 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params.require(:book).permit(:isbn)
+    params.require(:book).permit(:isbn, :title)
   end
 end

@@ -4,7 +4,7 @@
 <ul>
   <% @books.each do |book| %>
     <li>
-      <%= book.title %>
+      <%= link_to book.title, book_path(book) %>
       <%= book.isbn %>
     </li>
   <% end %>

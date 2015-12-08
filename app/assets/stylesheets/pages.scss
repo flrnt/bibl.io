@@ -1,3 +1,47 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.home-bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3PUzY-lX6Y3NCy0MhuHYTT1vAO1g2hORRHcwG_fN41B7JZBVfmw');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  &::after {
+    position: absolute;
+    content:"";
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: #eacda3; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #eacda3 , #d6ae7b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #eacda3 , #d6ae7b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.5;
+  }
+}
+.home-title {
+  font-size: 48px;
+}
+.home-subtitle {
+  font-size: 18px;
+  padding-top: 30px;
+}
+.home-content {
+  z-index: 1;
+  a {
+  font-size: 50px;
+  padding: 10px 25px;
+  border-radius: 3px;
+  color:white;
+  background-color: red;
+  transition: 300ms;
+  &:hover {
+    text-decoration: none;
+    background-color: #E80A0A;
+  }
+  }
+}
